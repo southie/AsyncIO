@@ -473,7 +473,7 @@ namespace AsyncIO.Windows
             {
                 SocketError socketError = (SocketError)Marshal.GetLastWin32Error();
 
-                if (socketError != SocketError.IOPending)
+                if (socketError != SocketError.IOPending && socketError != SocketError.Success)
                 {
                     throw new SocketException((int)socketError);
                 }                
@@ -523,7 +523,7 @@ namespace AsyncIO.Windows
             {
                 var socketError = (SocketError)Marshal.GetLastWin32Error();
 
-                if (socketError != SocketError.IOPending)
+                if (socketError != SocketError.IOPending && socketError != SocketError.Success)
                 {
                     throw new SocketException((int)socketError);
                 }                
@@ -578,7 +578,7 @@ namespace AsyncIO.Windows
             {
                 socketError = (SocketError)Marshal.GetLastWin32Error();
 
-                if (socketError != SocketError.IOPending)
+                if (socketError != SocketError.IOPending && socketError != SocketError.Success)
                 {                
                     throw new SocketException((int)socketError);
                 }
@@ -613,7 +613,7 @@ namespace AsyncIO.Windows
             {
                 socketError = (SocketError)Marshal.GetLastWin32Error();
 
-                if (socketError != SocketError.IOPending)
+                if (socketError != SocketError.IOPending && socketError != SocketError.Success)
                 {
                     throw new SocketException((int)socketError);
                 }
